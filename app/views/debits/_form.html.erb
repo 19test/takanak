@@ -1,0 +1,29 @@
+<%= form_for(@debit) do |f| %>
+  <% if @debit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@debit.errors.count, "error") %> prohibited this debit from being saved:</h2>
+
+      <ul>
+      <% @debit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :friend_id %><br />
+    <%= select("debit", "friend_id", current_user.friends.collect {|p| [ p.name, p.id ] }) %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= select("debit", "status", STATUS_CHOICES.collect{|key,value| [value, key]}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

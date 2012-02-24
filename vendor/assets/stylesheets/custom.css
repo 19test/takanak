@@ -1,0 +1,21 @@
+body {
+    font-family: trebuchet ms;
+}
+#container { margin-top:50px; }
+#hero {
+    background: #eeeded; padding: 10px;
+    font-size: 28px; color: #333333;
+    margin-bottom: 20px;
+}
+p {padding: 3px; margin: 2px;}
+.header { margin-bottom: 10px;}
+#connect {
+    margin-top: 160px;
+}
+
+#footer {
+   background: #eeeded;
+    padding: 10px;
+     color: #333333;
+    margin-top: 50px;
+}

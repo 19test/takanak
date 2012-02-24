@@ -1,0 +1,36 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="tr"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="tr"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="tr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="tr"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Takanak !</title>
+  <%= stylesheet_link_tag    "960", :media => "all" %>
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+  <%= stylesheet_link_tag    "custom", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="container" class="container_16">
+  <div class="header">
+    <div class="grid_5">
+    <a href=""><img src="/static/logo.png" alt="Takanak BETA !"></a>
+
+
+  </div>  <div class="clear"></div>
+</div>
+
+  <%= yield %>
+
+
+  <div class="grid_15" id="footer">
+    &copy; 2012 - BORÇ YİĞİDİN KAMÇISIDIR LTD. ŞTİ.
+  </div>
+</div>
+
+</body>
+</html>
