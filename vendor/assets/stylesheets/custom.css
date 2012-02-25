@@ -1,21 +1,129 @@
 body {
-    font-family: trebuchet ms;
+    font-family: "Trebuchet MS", Helvetica;
+    background: #fff;
+
+
 }
-#container { margin-top:50px; }
+a {color: #b60909; text-decoration: none;}
+a:visited {color: #b60909;}
+#container {  }
+#logo {margin-top:35px; margin-bottom: 2px;}
+#logo a { color: white; font-size: 60px;}
 #hero {
-    background: #eeeded; padding: 10px;
+    background: #eeeded;
     font-size: 28px; color: #333333;
     margin-bottom: 20px;
 }
-p {padding: 3px; margin: 2px;}
-.header { margin-bottom: 10px;}
+p {padding: 10px; margin: 2px;}
+
 #connect {
     margin-top: 160px;
 }
 
+
+.header{
+     background-color: #b60909;
+}
+
 #footer {
    background: #eeeded;
-    padding: 10px;
+
      color: #333333;
     margin-top: 50px;
+}
+
+#navigation {
+    margin:  0px; padding: 0px;
+    background: #900909;
+    font-size: 18px;
+    font-weight: bold;
+}
+#navigation li {
+    padding:10px 20px 10px 20px; margin: 0px;
+    list-style: none;
+    float: left;
+}
+
+#navigation li:hover, #navigation li.active {
+    background: #620505;
+}
+
+#navigation li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header #header-total {
+    margin-top: 65px;
+    display: block;
+     color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+h1 {
+    color: #3e3e3e;
+    margin-top: 20px;
+    padding:  0px;
+}
+
+table {
+    width: 100%;
+      font-size: 17px;
+}
+table td, th {  padding: 10px; }
+table th {
+    background: #333333;
+    color: white;
+    text-align: left;
+
+}
+table td {
+    background: #f5f4f4;
+}
+
+
+.button {
+    display: block;
+    padding:  10px;
+    background-color: #900909;
+    color: white !important;
+    font-size: 17px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.button:hover {
+    background: #333333;
+    color: white;
+}
+
+#notice {
+    background: black;
+    color: white;
+    font-size: 20px;
+
+}
+
+#notice p {
+    padding: 10px;
+}
+
+form {
+    font-size: 20px;
+}
+
+form label {
+    color: #666666;
+    margin-top: 10px;
+    display: block;
+}
+
+input {
+    font-family: trebuchet ms;
+}
+form input[type='text'] {
+    padding: 3px;
+    font-family: trebuchet ms;
+    margin-bottom: 5px;
 }

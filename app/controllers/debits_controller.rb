@@ -1,8 +1,9 @@
+# -*- coding:utf-8 -*-
 class DebitsController < ApplicationController
   # GET /debits
   # GET /debits.json
   def index
-    @debits = current_user.debits
+    @debits = current_user.debits.find_all_by_status(params[:status])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,10 +42,11 @@ class DebitsController < ApplicationController
   # POST /debits.json
   def create
     @debit = Debit.new(params[:debit])
+    @debit.status = "not_paid"
 
     respond_to do |format|
       if @debit.save
-        format.html { redirect_to @debit, notice: 'Debit was successfully created.' }
+        format.html { redirect_to @debit.friend, notice: 'Borç eklendi.' }
         format.json { render json: @debit, status: :created, location: @debit }
       else
         format.html { render action: "new" }
@@ -60,7 +62,7 @@ class DebitsController < ApplicationController
 
     respond_to do |format|
       if @debit.update_attributes(params[:debit])
-        format.html { redirect_to @debit, notice: 'Debit was successfully updated.' }
+        format.html { redirect_to @debit.friend, notice: 'Borç güncellendi.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -73,11 +75,8 @@ class DebitsController < ApplicationController
   # DELETE /debits/1.json
   def destroy
     @debit = current_user.debits.find(params[:id])
+    friend = @debit.friend
     @debit.destroy
-
-    respond_to do |format|
-      format.html { redirect_to debits_url }
-      format.json { head :no_content }
-    end
+    redirect_to friend, notice: "Borç temizlendi."
   end
 end

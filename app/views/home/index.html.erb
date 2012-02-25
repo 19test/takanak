@@ -1,8 +1,8 @@
-<div class="grid_15" id="hero">
-    <p>“borcum borç”</p>
-     <p>“bende paran kalmaz”</p>
+<div class="grid_15 alpha" id="hero">
 
-    <p>diyorlar, sen de inanıyorsun. borçlarını aklına tutamıyorsun.  arkadaşların borçlarına sadık değil.
+    <p> “borcum borç”,
+     “bende paran kalmaz”
+diyorlar, sen de inanıyorsun. borçlarını aklına tutamıyorsun.  arkadaşların borçlarına sadık değil.
     borç mevzusunu arkadaşlarına açamıyorsun bile.
     öyle değil mi ?
     </p>
@@ -11,14 +11,15 @@
   <div class="grid_10">
     <img src="/static/landing-image.png" alt="">
   </div>
-  <div class="grid_4" id="connect">
-    <a href="/auth/twitter"><img src="/static/connect-with-twitter.png" alt=""></a>
 
-  </div>
-    <!--
-<% if current_user %>
-  Welcome <%= current_user.name %>!
-  <%= link_to "Sign Out", signout_path %>
-<% else %>
-  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-<% end %>-->
+
+   <% if current_user %>
+    <div class="grid_4" style="margin-top:100px">
+        <h1> Selam <span style='color:black'><%= current_user.name %></span>,
+        Biz dostuz ! </h1>
+         Şimdi hemen borçu arkadaşlarını ve borçlarını <a href="<%=friends_path%>">şuradan</a> tanımla.  </div>
+    <% else %>
+        <div class="grid_4" id="connect"> <a href="/auth/twitter"><img src="/static/connect-with-twitter.png" alt=""></a>
+           </div>
+    <% end %>
+

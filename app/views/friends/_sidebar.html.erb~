@@ -1,0 +1,1 @@
+selam <%=current_user.name%>, biz dostuz.

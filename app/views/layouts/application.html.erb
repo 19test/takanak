@@ -16,19 +16,46 @@
 <body>
 
 <div id="container" class="container_16">
-  <div class="header">
+  <div class="header grid_15">
+    <div class="grid_9" id="logo">
+    <a href="/">Takanak</a>
+    </div>
+
+
+    <!-- TODO: Implement edilecek
     <div class="grid_5">
-    <a href=""><img src="/static/logo.png" alt="Takanak BETA !"></a>
-
-
-  </div>  <div class="clear"></div>
+      <a href="#" id="header-total">
+        Toplam alacağınız
+        <span>{} TL</span>
+      </a>
+    </div>
+    -->
+    <div class="clear"></div>
 </div>
 
-  <%= yield %>
+  <div class='grid_15'>
+
+    <% if current_user %>
+    <ul id="navigation" class="grid_15">
+    <li class="<%='active' if controller_name == 'friends'%>"><%=link_to 'Arkadaşların', friends_path%></li>
+    <li class="<%='active' if params['status'] == 'paid'%>"><%=link_to 'Ödenmemiş Borçlar', debits_path(:status=>'paid')%></li>
+    <li class="<%='active' if params['status'] == 'not_paid'%>"><%=link_to 'Ödenenler', debits_path(:status=>'not_paid')%></li>
+    <li style='float:right'> <%= link_to "Çıkış", signout_path %></li>
+    </ul>
+<div class="clear"></div>
+        <% if !notice.nil? %>
+                   <div class='grid_15 alpha' id="notice"><p><%= notice %></p></div>
+               <% end %>
+
+    <% end %>
+
+    <%= yield %>
+
+  </div>
 
 
   <div class="grid_15" id="footer">
-    &copy; 2012 - BORÇ YİĞİDİN KAMÇISIDIR LTD. ŞTİ.
+    <p>&copy; 2012 - BORÇ YİĞİDİN KAMÇISIDIR LTD. ŞTİ.</p>
   </div>
 </div>
 

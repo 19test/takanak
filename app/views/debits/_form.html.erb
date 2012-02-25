@@ -12,18 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :friend_id %><br />
+    <%= f.label :friend_id, label="Arkadaş" %>
     <%= select("debit", "friend_id", current_user.friends.collect {|p| [ p.name, p.id ] }) %>
   </div>
   <div class="field">
-    <%= f.label :amount %><br />
+    <%= f.label :amount, label="Miktar" %>
     <%= f.text_field :amount %>
   </div>
-  <div class="field">
-    <%= f.label :status %><br />
+
+    <% if action_name == "edit" %>
+
+    <div class="field">
+    <%= f.label :status, label="Durum" %>
     <%= select("debit", "status", STATUS_CHOICES.collect{|key,value| [value, key]}) %>
   </div>
+    <% end %>
+
+    <br />
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("Kaydet") %>
   </div>
-<% end %>
+  <% end %>

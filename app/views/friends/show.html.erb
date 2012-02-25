@@ -1,25 +1,76 @@
-<p id="notice"><%= notice %></p>
+
+<div class="grid_9 alpha"><h1> <%= @friend.name %>
+
+</h1></div>
+
+<div class="grid_2"><%= link_to 'Sil', @friend, :confirm =>
+        "Bu adamı silince borçlarını da silmiş olacaksın. Bir daha düşün !", :method=>"delete", :class => "button" %></div>
+<div class="grid_2"><%= link_to 'Düzenle', edit_friend_path(@friend), :class => "button" %></div>
+<div class="grid_2 omega"><%= link_to 'Geri', 'javascript:history.go(-1)', :class => "button" %></div>
+<div class="clear"></div>
+
 
 <p>
-  <b>Name:</b>
-  <%= @friend.name %>
+  <b>Email adresi:</b>
+  <%= mail_to(@friend.email) %>
 </p>
 
 <p>
-  <b>Email:</b>
-  <%= @friend.email %>
+  <b>Toplam Borcu:</b>
+  <%= @friend.total_debit %> TL
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @friend.user_id %>
+  <b>Ödediği miktar:</b>
+  <%= @friend.total_paid  %> TL
 </p>
 
 <p>
-  <b>Twitter username:</b>
-  <%= @friend.twitter_username %>
+  <b>Ödemediği miktar:</b>
+  <%= @friend.total_not_paid %> TL
 </p>
 
+<% if @friend.total_paid == 0 and @friend.total_debit > 0  %>
+<div class="grid_12 alpha">
+  <h1>Dertler derya olmuş, bu arkadaş hiç borcunu ödememiş.<br /> Sen hala duruyorsun öyle. Arkadaşın derhal kınanması lazım !</h1>
+  <strong>Şimdi sağdan bir kınama biçimi seç ve sosyal medyayı kullanarak kınım kınım kına.</strong>
+</div>
 
-<%= link_to 'Edit', edit_friend_path(@friend) %> |
-<%= link_to 'Back', friends_path %>
+<div class="grid_3  omega">
+<a href="#" class='button'>Biçimsiz</a>
+<a href="#"  class='button'>Seviyeli</a>
+<a href="#"  class='button'>3. Ağız'dan</a></div>
+<% end %>
+
+<div class="clear"></div>
+
+<h1>Kayıtlı borçları</h1>
+
+<table>
+  <tr>
+     <th>Miktar</th>
+    <th>Durum</th>
+    <th width="90"></th>
+    <th width="90"></th>
+  </tr>
+<% if !@friend.debits.exists? %>
+      <tr>
+        <td colspan="4">Tertemiz. Hiç borç yok. Tabi ki de öyle değil. Şimdi borçlarını tanımla.</td>
+      </tr>
+<% end %>
+<% @friend.debits.each do |debit| %>
+  <tr>
+     <td><%= debit.amount %></td>
+    <td><%= debit.get_status %></td>
+    <td><%= link_to 'İşlem Yap', edit_debit_path(debit) %></td>
+    <td><%= link_to 'Borcu Sil', debit, confirm: 'Silmek istediğinden emin misin ?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<div class="grid_3 alpha">
+  <%= link_to 'Yeni Borç Ekle', new_debit_path, :class => "button" %>
+</div>
+

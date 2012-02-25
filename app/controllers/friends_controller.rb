@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 class FriendsController < ApplicationController
 
   # GET /friends
@@ -46,7 +47,7 @@ class FriendsController < ApplicationController
 
     respond_to do |format|
       if @friend.save
-        format.html { redirect_to @friend, notice: 'Friend was successfully created.' }
+        format.html { redirect_to @friend, notice: 'Arkadaşa başarıyla şekil yapıldı.' }
         format.json { render json: @friend, status: :created, location: @friend }
       else
         format.html { render action: "new" }
@@ -62,7 +63,7 @@ class FriendsController < ApplicationController
 
     respond_to do |format|
       if @friend.update_attributes(params[:friend])
-        format.html { redirect_to @friend, notice: 'Friend was successfully updated.' }
+        format.html { redirect_to @friend, notice: 'Arkadaşa başarıyla güncellendi.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
