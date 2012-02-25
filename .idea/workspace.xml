@@ -31,19 +31,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="debit.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="debit.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/debit.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="24" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
+            <state line="7" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.11225659">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friend.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/friends/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="35" selection-start="218" selection-end="218" vertical-scroll-proportion="-4.2608695">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/debits/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="35" selection-start="297" selection-end="297" vertical-scroll-proportion="-4.2608695">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="friend.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/friend.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="83" selection-start="334" selection-end="334" vertical-scroll-proportion="0.17640321">
+            <state line="9" column="43" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,21 +90,21 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/friends/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/friends_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/debits/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/debits/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/debit.rb" />
-        <option value="$PROJECT_DIR$/app/views/debits/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/controllers/debits_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/initializers/omniauth.rb" />
-        <option value="$PROJECT_DIR$/app/models/friend.rb" />
         <option value="$PROJECT_DIR$/vendor/assets/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/debits/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/friends/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/friend.rb" />
+        <option value="$PROJECT_DIR$/app/models/debit.rb" />
       </list>
     </option>
   </component>
@@ -210,6 +228,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="friends" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="debitmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="takanak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="debits" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -640,24 +680,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/friends/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="461" selection-end="461" vertical-scroll-proportion="-9.730769" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/debits/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="74" selection-end="74" vertical-scroll-proportion="0.15178572" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/debit_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/debits/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="77" selection-start="731" selection-end="731" vertical-scroll-proportion="0.71651787" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/friends_controller.rb">
@@ -726,16 +751,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/debit.rb">
+    <entry file="file://$USER_HOME$/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/rubygems/dependency_installer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
+        <state line="74" column="4" selection-start="2420" selection-end="2420" vertical-scroll-proportion="0.04467354">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/debits/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="35" selection-start="297" selection-end="297" vertical-scroll-proportion="-4.2608695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/friends/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="35" selection-start="218" selection-end="218" vertical-scroll-proportion="-4.2608695">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/friend.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="83" selection-start="334" selection-end="334" vertical-scroll-proportion="0.17640321">
+        <state line="9" column="43" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/debit.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.11225659">
           <folding />
         </state>
       </provider>
