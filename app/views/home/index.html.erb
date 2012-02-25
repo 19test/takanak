@@ -8,18 +8,20 @@ diyorlar, sen de inanıyorsun. borçlarını aklına tutamıyorsun.  arkadaşlar
     </p>
   </div>
 
-  <div class="grid_10">
+  <div class="grid_9 alpha">
     <img src="/static/landing-image.png" alt="">
   </div>
 
 
    <% if current_user %>
-    <div class="grid_4" style="margin-top:100px">
-        <h1> Selam <span style='color:black'><%= current_user.name %></span>,
+    <div class="grid_5" style="margin-top:100px; margin-left: 20px;">
+        <h1> Selam <span style='color:black'><%= current_user.name %></span>, <br />
         Biz dostuz ! </h1>
          Şimdi hemen borçu arkadaşlarını ve borçlarını <a href="<%=friends_path%>">şuradan</a> tanımla.  </div>
     <% else %>
-        <div class="grid_4" id="connect"> <a href="/auth/twitter"><img src="/static/connect-with-twitter.png" alt=""></a>
+        <div class="grid_4" id="connect">
+          <a href="/auth/twitter"><img src="/static/connect-with-twitter.png" alt=""></a>
+          <a href="/auth/facebook"><img src="/static/connect-with-facebook.png" alt=""></a>
            </div>
     <% end %>
 

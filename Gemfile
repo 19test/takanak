@@ -29,6 +29,7 @@ gem 'jquery-rails'
 gem 'nifty-generators'
 #gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
