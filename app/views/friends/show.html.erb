@@ -36,10 +36,11 @@
   <strong>Şimdi sağdan bir kınama biçimi seç ve sosyal medyayı kullanarak kınım kınım kına.</strong>
 </div>
 
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <div class="grid_3  omega">
-<a href="#" class='button'>Biçimsiz</a>
-<a href="#"  class='button'>Seviyeli</a>
-<a href="#"  class='button'>3. Ağız'dan</a></div>
+<a data-related="<%= @friend.twitter_username %>" href="https://twitter.com/intent/tweet?screen_name=<%= @friend.twitter_username %>&text=üç gün dedin beş gün dedin aylar oldu gelmedin. ne zaman ödiycen borcumu ?" class='button'>Biçimsiz</a>
+<a data-related="<%= @friend.twitter_username %>"  href="https://twitter.com/intent/tweet?screen_name=<%= @friend.twitter_username %>&text=kanka o değil de hani şey. ımmm kem küm. biliyosun işte. şu borç olayı. sıkıntı yok ama ama onu bir hatırlatayım dedim."   class='button'>Kırmadan</a>
+<a data-related="<%= @friend.twitter_username %>"  href="https://twitter.com/intent/tweet?screen_name=<%= @friend.twitter_username %>&text=bana tam <%=@friend.total_debit%> TL borcun varmış %23takanak öyle diyor. doğru mu hacı ?"   class='button'>Dolaylı Yoldan</a></div>
 <% end %>
 
 <div class="clear"></div>

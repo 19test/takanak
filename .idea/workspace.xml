@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/friends/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="30" selection-start="1765" selection-end="2051" vertical-scroll-proportion="-29.565218">
+            <state line="42" column="133" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.3106332">
               <folding />
             </state>
           </provider>
@@ -40,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="26" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.48941177">
+            <state line="31" column="38" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-13.826087">
               <folding />
             </state>
           </provider>
@@ -74,10 +74,10 @@
         <option value="$PROJECT_DIR$/app/models/friend.rb" />
         <option value="$PROJECT_DIR$/app/models/debit.rb" />
         <option value="$PROJECT_DIR$/config/locales/tr.yml" />
-        <option value="$PROJECT_DIR$/app/views/friends/show.html.erb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/debits/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/friends/show.html.erb" />
       </list>
     </option>
   </component>
@@ -802,13 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/friends/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="30" selection-start="1765" selection-end="2051" vertical-scroll-proportion="-29.565218">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/debits/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="38" selection-start="744" selection-end="744" vertical-scroll-proportion="-17.043478">
@@ -818,7 +811,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="26" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.48941177">
+        <state line="31" column="38" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-13.826087">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/friends/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="133" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.3106332">
           <folding />
         </state>
       </provider>
