@@ -50,6 +50,8 @@
   <tr>
      <th>Miktar</th>
     <th>Durum</th>
+    <th>Borç verdiğiniz tarih</th>
+    <th>Ödediği tarih</th>
     <th width="90"></th>
     <th width="90"></th>
   </tr>
@@ -62,6 +64,14 @@
   <tr>
      <td><%= debit.amount %></td>
     <td><%= debit.get_status %></td>
+    <td><%= distance_of_time_in_words(Time.now, debit.created_at) %> önce </td>
+    <td>
+      <% if debit.updated_at == debit.created_at %>
+      hiç ödemedi ki
+          <% else %>
+      <%= distance_of_time_in_words(Time.now, debit.updated_at) %> önce
+          <% end %>
+          </td>
     <td><%= link_to 'İşlem Yap', edit_debit_path(debit) %></td>
     <td><%= link_to 'Borcu Sil', debit, confirm: 'Silmek istediğinden emin misin ?', method: :delete %></td>
   </tr>
