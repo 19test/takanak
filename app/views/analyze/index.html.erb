@@ -1,0 +1,14 @@
+<h1>Rakamlarla siz</h1>
+<ul>
+  <li>Arkadaşlarınıza toplam <%=@total_debit%> TL borç vermişsiniz.</li>
+  <li>Verdiğiniz borçların <%=@total_paid %> TL'sini geri alabilmişsiniz.</li>
+  <li>Verdiğiniz borçların <%=@total_not_paid %> TL'si kayıplarda.</li>
+</ul>
+
+
+<h1>Borcuna en sadık arkadaşın; <%= link_to @max_paid_amount.friend, @max_paid_amount.friend %></h1>
+Sizden tam <%= @max_paid_amount.amount %> lira borç aldı ve
+<%= distance_of_time_in_words(@max_paid_amount.updated_at, @max_paid_amount.created_at ) %> gibi bir sürede geri ödedi (adamın dibi)
+
+
+
