@@ -29,8 +29,10 @@ class DebitsController < ApplicationController
   def create
     @debit = Debit.new(params[:debit])
     @debit.status = "not_paid"
+    alert = @debit.friend.total_not_paid > 0
     if @debit.save
-      redirect_to @debit.friend, notice: 'Borç eklendi.'
+      redirect_to @debit.friend, notice: alert ? "Bu adam seni kazıklıyor. Arkadaş analizi sayfasını incelemelisin." : "Borç eklendi"
+
     else
       render action: "new"
     end
