@@ -1,34 +1,29 @@
-
-
 <div class="grid_10 alpha"><h1>Borçlu arkadaşların</h1></div>
 <div class="grid_3 "><%= link_to 'Yeni Arkadaş', new_friend_path, :class => "button" %></div>
-<div class="grid_2 omega"><%= link_to 'Yeni Borç',new_debit_path , :class => "button" %></div>
+<div class="grid_2 omega"><%= link_to 'Yeni Borç', new_debit_path, :class => "button" %></div>
 
 <table>
   <tr>
     <th width="300">Adı ve Soyadı</th>
     <th>Email adresi</th>
-
-
     <th>Toplam borcu</th>
     <th width="40"></th>
     <th width="40"></th>
-   </tr>
-<% if !@friends.exists? %>
+  </tr>
+  <% if !@friends.exists? %>
       <tr>
         <td colspan="5">Henüz hiç arkadaş eklememişsiniz.</td>
-</tr>
-<% end %>
-<% @friends.each do |friend| %>
-  <tr>
-    <td><%= link_to friend.name, friend %></td>
-    <td><%= friend.email %></td>
-
-    <td><%= friend.total_not_paid %> TL</td>
-      <td><%= link_to 'Düzenle', edit_friend_path(friend) %></td>
-    <td><%= link_to 'Sil', friend, confirm: 'Emin misin ?', method: :delete %></td>
-  </tr>
-<% end %>
+      </tr>
+  <% end %>
+  <% @friends.each do |friend| %>
+      <tr>
+        <td><%= link_to friend.name, friend %></td>
+        <td><%= friend.email %></td>
+        <td><%= friend.total_not_paid %> TL</td>
+        <td><%= link_to 'Düzenle', edit_friend_path(friend) %></td>
+        <td><%= link_to 'Sil', friend, confirm: 'Emin misin ?', method: :delete %></td>
+      </tr>
+  <% end %>
 </table>
 
 
