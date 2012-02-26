@@ -1,8 +1,8 @@
 Debitmanager::Application.routes.draw do
 
   resources :debits
-
   resources :friends
+  resources :analyze
 
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout

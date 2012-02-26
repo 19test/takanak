@@ -40,6 +40,7 @@
     <li class="<%='active' if controller_name == 'friends'%>"><%=link_to 'Arkadaşların', friends_path%></li>
     <li class="<%='active' if params['status'] == 'not_paid'%>"><%=link_to 'Ödenmemiş Borçlar', debits_path(:status=>'not_paid')%></li>
     <li class="<%='active' if params['status'] == 'paid'%>"><%=link_to 'Ödenenler', debits_path(:status=>'paid')%></li>
+    <li class="<%='active' if controller_name == 'analyze'%>"><%=link_to 'Arkadaş Analizi', '/analyze' %></li>
     <li style='float:right'> <%= link_to "Çıkış", signout_path %></li>
     </ul>
 <div class="clear"></div>

@@ -11,10 +11,17 @@
     </div>
   <% end %>
 
+ <% if params[:friend_id] %>
+
+        <%= hidden_field(:debit, :friend_id, :value => params[:friend_id] ) %>
+
+    <% else %>
   <div class="field">
     <%= f.label :friend_id, label="Arkadaş" %>
     <%= select("debit", "friend_id", current_user.friends.collect {|p| [ p.name, p.id ] }) %>
   </div>
+
+    <% end %>
   <div class="field">
     <%= f.label :amount, label="Miktar" %>
     <%= f.text_field :amount %>

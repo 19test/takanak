@@ -5,10 +5,17 @@
   <li>Verdiğiniz borçların <%=@total_not_paid %> TL'si kayıplarda.</li>
 </ul>
 
-
+<% if @max_paid_amount %>
 <h1>Borcuna en sadık arkadaşın; <%= link_to @max_paid_amount.friend, @max_paid_amount.friend %></h1>
 Sizden tam <%= @max_paid_amount.amount %> lira borç aldı ve
 <%= distance_of_time_in_words(@max_paid_amount.updated_at, @max_paid_amount.created_at ) %> gibi bir sürede geri ödedi (adamın dibi)
+<% end %>
+
+<% if @max_not_paid_amount %>
+<h1>Tahinlerimize göre <%= link_to @max_not_paid_amount.friend, @max_not_paid_amount.friend %> tarafından kazıklanıyorsun.</h1>
+Sizden  arkadaş ayağına  <%= distance_of_time_in_words(DateTime.now, @max_paid_amount.created_at ) %> önce  <%= @max_not_paid_amount.amount %>
+    lira borç aldı ve  kayıplara karıştı.
+<% end %>
 
 
 
