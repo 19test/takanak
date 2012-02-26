@@ -142,6 +142,8 @@ form input[type='text'] {
 margin-top:100px; margin-left: 20px;
 }
 
+.pagination { font-size: 15px; font-weight:bold}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 980px) {
     .header {display: none}

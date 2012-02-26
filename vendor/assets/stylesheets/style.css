@@ -213,51 +213,8 @@ td { vertical-align: top; }
 
 
 .left { float:left; }
-.right { float:left; }
-
-
-
-
-.pagination {
-    height: 36px;
-    margin: 18px 0px 10px 10px;
-
-
-}
-.pagination ul {
-    padding:0;
-    background: rgba(56, 68, 115, 0.30);
-    float: left;
-    margin: 0;
-    font-weight: bold;
-    font-size:17px;
-}
-.pagination li {
-    display: inline;
-}
-.pagination a {
-    float: left;
-    color: #394575;
-    padding: 0 14px;
-    line-height: 34px;
-    border-right-color: #ddd;
-    /* IE6-7 */
-
-    text-decoration: none;
-}
-.pagination a:hover, .pagination .active a {
-    background-color: #fff;
-}
-.pagination .disabled a, .pagination .disabled a:hover {
-    background-color: transparent;
-    color: rgba(56, 68, 115, 0.54);
-}
-.pagination .next a {
-    border: 0;
-}
-
-
-
+.right { float:left; } 
+ 
 
 
 

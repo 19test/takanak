@@ -2,7 +2,7 @@
 class DebitsController < ApplicationController
 
   def index
-    @debits = current_user.debits.find_all_by_status(params[:status])
+    @debits = current_user.debits.paginate(:page => params[:page], :per_page => 8).find_all_by_status(params[:status])
     respond_to do |format|
       format.html
       format.json { render json: @debits }
