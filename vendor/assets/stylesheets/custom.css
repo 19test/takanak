@@ -138,10 +138,15 @@ form input[type='text'] {
     text-indent: -9999px;
 }
 
+#hello {
+margin-top:100px; margin-left: 20px;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 980px) {
     .header {display: none}
     #connect {margin-top: 10px;}
+	#hello {margin-top:20px;}
     .landing {
         background:  none;
         text-indent: 0px;

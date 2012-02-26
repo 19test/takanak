@@ -16,7 +16,7 @@
 			// default selectors
 			"parent_selector" : parent.selector,
 			"link_selector" : "a",
-			"exclude_selector" : "a[href^='http'], .no_ajax, a[rel='nofollow']",
+			"exclude_selector" : "a[href^='http'], .no_ajax, a[rel='nofollow'], a[href^='javascript']",
 			
 			// effect options
 			"effects" : true,				
