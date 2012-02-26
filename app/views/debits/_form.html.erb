@@ -1,8 +1,7 @@
 <%= form_for(@debit) do |f| %>
   <% if @debit.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@debit.errors.count, "error") %> prohibited this debit from being saved:</h2>
-
+      <h2>uh !</h2>
       <ul>
       <% @debit.errors.full_messages.each do |msg| %>
         <li><%= msg.split('^').last %></li>

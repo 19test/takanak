@@ -9,7 +9,8 @@
     <th width="90"></th>
     <th width="90"></th>
   </tr>
-  <% if !@debits %>
+
+  <% if @debits.empty? %>
       <tr>
         <td colspan="4">Hiç yok ki.</td>
       </tr>

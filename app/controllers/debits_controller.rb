@@ -1,82 +1,56 @@
 # -*- coding:utf-8 -*-
 class DebitsController < ApplicationController
-  # GET /debits
-  # GET /debits.json
+
   def index
     @debits = current_user.debits.find_all_by_status(params[:status])
-
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @debits }
     end
   end
 
-  # GET /debits/1
-  # GET /debits/1.json
   def show
     @debit = current_user.debits.find(params[:id])
-
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.json { render json: @debit }
     end
   end
 
-  # GET /debits/new
-  # GET /debits/new.json
   def new
     @debit = Debit.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @debit }
-    end
   end
 
-  # GET /debits/1/edit
+
   def edit
     @debit = current_user.debits.find(params[:id])
   end
 
-  # POST /debits
-  # POST /debits.json
   def create
     @debit = Debit.new(params[:debit])
     @debit.status = "not_paid"
-
-    respond_to do |format|
-      if @debit.save
-        format.html { redirect_to @debit.friend, notice: 'Borç eklendi.' }
-        format.json { render json: @debit, status: :created, location: @debit }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @debit.errors, status: :unprocessable_entity }
-      end
+    if @debit.save
+      redirect_to @debit.friend, notice: 'Borç eklendi.'
+    else
+      render action: "new"
     end
   end
 
-  # PUT /debits/1
-  # PUT /debits/1.json
+
   def update
     @debit = current_user.debits.find(params[:id])
-
-    respond_to do |format|
-      if @debit.update_attributes(params[:debit])
-        format.html { redirect_to @debit.friend, notice: 'Borç güncellendi.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @debit.errors, status: :unprocessable_entity }
-      end
+    if @debit.update_attributes(params[:debit])
+      redirect_to @debit.friend, notice: 'Borç güncellendi.'
+    else
+      render action: "edit"
     end
   end
 
-  # DELETE /debits/1
-  # DELETE /debits/1.json
   def destroy
     @debit = current_user.debits.find(params[:id])
     friend = @debit.friend
     @debit.destroy
     redirect_to friend, notice: "Borç temizlendi."
   end
+
 end

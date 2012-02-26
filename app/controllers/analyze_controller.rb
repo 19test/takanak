@@ -8,9 +8,4 @@ class AnalyzeController < ApplicationController
     @total_paid = current_user.friends.map{|friend| friend.total_paid }.inject(:+)
     @total_not_paid = current_user.friends.map{|friend| friend.total_not_paid }.inject(:+)
   end
-
-  def show
-
-  end
-
 end
