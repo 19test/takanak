@@ -1,9 +1,13 @@
+<% if @total_debit %>
 <h1>Rakamlarla siz</h1>
 <ul>
   <li>Arkadaşlarınıza toplam <%=@total_debit%> TL borç vermişsiniz.</li>
   <li>Verdiğiniz borçların <%=@total_paid %> TL'sini geri alabilmişsiniz.</li>
   <li>Verdiğiniz borçların <%=@total_not_paid %> TL'si kayıplarda.</li>
 </ul>
+<% else %>
+    <h1>Hiç alacağın yok ki.</h1>
+<% end %>
 
 <% if @max_paid_amount %>
 <h1>Borcuna en sadık arkadaşın; <%= link_to @max_paid_amount.friend, @max_paid_amount.friend %></h1>

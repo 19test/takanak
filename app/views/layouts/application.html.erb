@@ -11,6 +11,8 @@
   <%= stylesheet_link_tag    "style", :media => "all" %>
   <%= stylesheet_link_tag    "custom", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "jquery.fejax" %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= csrf_meta_tags %>
 </head>
@@ -61,5 +63,13 @@
   </div>
 </div>
 
+<script>
+  $(function () {
+      // eger javascript disable durumda ise, normal sekilde
+      // javascript aktif ise ajax ile yuklenecek projemiz.
+      // evet evet tek satirda. o da soyle;
+      $("#container").fejax();
+  })
+</script>
 </body>
 </html>
