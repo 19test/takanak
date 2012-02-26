@@ -1,13 +1,13 @@
-TAKANAK
+ï»¿TAKANAK
 =======
 
-Sen yetkili bir abiye benziyosun bunu okuduguna göre. Şunları belirteyim o zaman;
+Sen yetkili bir abiye benziyosun bunu okuduguna gÃ¶re. ÅunlarÄ± belirteyim o zaman;
 
-Arkadaş analizi sayfasında borcuna en sadık arkadaşı ve en yüz karasını görebilirsiniz. Ayrıca ufak tefek istatistikler de bulunmaktadr.
+ArkadaÅŸ analizi sayfasÄ±nda borcuna en sadÄ±k arkadaÅŸÄ± ve en yÃ¼z karasÄ±nÄ± gÃ¶rebilirsiniz. AyrÄ±ca ufak tefek istatistikler de bulunmaktadr.
 
-Sitede mobile dalga motoru için css3'ün media query'lerini kullandım. Pencerenizin boyutunu birazcık küçültün mobile seviyeye kadar. Tasarım başka bir şekle bürünecektir. Bu da uygulamayı otomatik mobile uyumlu yapmakta zaten.
+Sitede mobile dalga motoru iÃ§in css3'Ã¼n media query'lerini kullandÄ±m. Pencerenizin boyutunu birazcÄ±k kÃ¼Ã§Ã¼ltÃ¼n mobile seviyeye kadar. TasarÄ±m baÅŸka bir ÅŸekle bÃ¼rÃ¼necektir. Bu da uygulamayÄ± otomatik mobile uyumlu yapmakta zaten.
 
-Eğer kullanıcının javascript'i aktif ise sayfalar ajax ile yüklenmekte. Ajax ile yüklenirken geri - ileri ve yenileme butonları da çalışmakta. Kullanıcının javascripti pasif ise normal yollarla yükleme yapacaktır. Ayrıca arama motorları için de öyle. Bunu yapmak yaklaşık 10 saniyemi felan aldı. Nasıl mı yaptım ? şöyle; fejax ile.
+EÄŸer kullanÄ±cÄ±nÄ±n javascript'i aktif ise sayfalar ajax ile yÃ¼klenmekte. Ajax ile yÃ¼klenirken geri - ileri ve yenileme butonlarÄ± da Ã§alÄ±ÅŸmakta. KullanÄ±cÄ±nÄ±n javascripti pasif ise normal yollarla yÃ¼kleme yapacaktÄ±r. AyrÄ±ca arama motorlarÄ± iÃ§in de Ã¶yle. Bunu yapmak yaklaÅŸÄ±k 10 saniyemi felan aldÄ±. NasÄ±l mÄ± yaptÄ±m ? ÅŸÃ¶yle; fejax ile.
 
-Fejax kendi geliştirdiğim helper gibi bir şey. Şuradan inceleyebilirsiniz.
+Fejax kendi geliÅŸtirdiÄŸim helper gibi bir ÅŸey. Åuradan inceleyebilirsiniz.
 http://github.com/fatiherikli/fejax
